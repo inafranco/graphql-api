@@ -12,7 +12,7 @@ datasource db {
 
 model Exercise {
   id Int @id @default(autoincrement())
-  name String @unique
+  name String
   value Int
   workout Workout @relation(fields: [workoutId], references: [id])
   workoutId Int

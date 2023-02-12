@@ -13,6 +13,3 @@ CREATE TABLE "Workout" (
     "user" TEXT NOT NULL,
     "date" DATETIME NOT NULL
 );
-
--- CreateIndex
-CREATE UNIQUE INDEX "Exercise_name_key" ON "Exercise"("name");

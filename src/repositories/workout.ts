@@ -1,5 +1,6 @@
 import type Workout from "../models/workout";
 
-export interface WorkoutsRepository {
+export interface WorkoutRepository {
   create: (workout: Workout) => Promise<void>;
+  findMany: () => Promise<Workout[]>;
 }
