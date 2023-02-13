@@ -1,14 +1,15 @@
 import type Exercise from "../../models/exercise";
 import type { ExerciseRepository } from "../exercise";
+import type { InMemory } from "./inMemory";
 
 export class ExerciseInMemoryRepository implements ExerciseRepository {
-  exercise: Exercise[];
+  inMemory: InMemory;
 
-  constructor() {
-    this.exercise = [];
+  constructor(inMemory: InMemory) {
+    this.inMemory = inMemory;
   }
 
   async findMany(): Promise<Exercise[]> {
-    return this.exercise;
+    return this.inMemory.exercise;
   }
 }

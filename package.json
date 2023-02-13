@@ -7,13 +7,13 @@
     "compile": "tsc",
     "migrate": "npx prisma migrate dev --name init",
     "start": "npm run compile && node ./dist/src/server.js",
-    "test": "vitest",
+    "test": "vitest run",
     "prepare": "husky install",
     "format": "prettier --write .",
     "check-types": "tsc --pretty --noEmit",
     "check-lint": "eslint src",
     "check-format": "prettier --check .",
-    "check": "npm run check-format && npm run check-lint && npm run check-types"
+    "check": "npm run check-format && npm run check-lint && npm run check-types && npm run test"
   },
   "repository": {
     "type": "git",

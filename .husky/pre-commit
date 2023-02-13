@@ -7,6 +7,8 @@ npm run check-lint || (echo 'check-lint failed.' && return false;)
 
 npm run check-format || (echo 'check-format failed.' && return false;)
 
+npm run test || (echo 'test failed.' && return false;)
+
 npm run compile || (echo 'build failed.' && return false;)
 
 echo 'pre-commit checks passed!'
